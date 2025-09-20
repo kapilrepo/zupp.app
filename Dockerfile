@@ -23,7 +23,7 @@ RUN chown -R bunjs:nodejs /app
 USER bunjs
 
 # Expose port 3000 (will be mapped to 80 by EasyPanel)
-EXPOSE 3000
+EXPOSE 80
 
 # Set environment variables
 ENV NODE_ENV=production
