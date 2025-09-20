@@ -22,7 +22,13 @@ const app = new Hono();
 app.use('*', logger());
 app.use('*', prettyJSON());
 app.use('*', cors({
-  origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003','http://localhost:5174'],
+  origin: process.env.CORS_ORIGIN?.split(',') || [
+    'http://localhost:3001', 
+    'http://localhost:3002', 
+    'http://localhost:3003',
+    'http://localhost:5174',
+    'https://zuppstorefront-4z2o42hdw-kapil-sharmas-projects-31b4bc76.vercel.app'
+  ],
   credentials: true,
 }));
 
