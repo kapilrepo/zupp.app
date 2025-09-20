@@ -22,12 +22,12 @@ RUN adduser --system --uid 1001 bunjs
 RUN chown -R bunjs:nodejs /app
 USER bunjs
 
-# Expose port 80 for direct serving
+# Expose port 80 (app runs on 3000, mapped to 80)
 EXPOSE 80
 
 # Set environment variables
 ENV NODE_ENV=production
-ENV PORT=80
+ENV PORT=3000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
