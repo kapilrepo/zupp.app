@@ -22,12 +22,12 @@ RUN adduser --system --uid 1001 bunjs
 RUN chown -R bunjs:nodejs /app
 USER bunjs
 
-# Expose port 3001 (will be mapped to 80 by EasyPanel)
-EXPOSE 3001
+# Expose port 3000 (will be mapped to 80 by EasyPanel)
+EXPOSE 3000
 
 # Set environment variables
 ENV NODE_ENV=production
-ENV PORT=3001
+ENV PORT=3000
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
